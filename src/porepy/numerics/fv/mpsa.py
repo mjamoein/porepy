@@ -9,8 +9,10 @@ that module as well.
 """
 import warnings
 import numpy as np
+import numpy.matlib
 import scipy.sparse as sps
 import logging
+
 import porepy as pp
 
 # Module-wide logger
@@ -528,7 +530,7 @@ class FracturedMpsa(Mpsa):
 
         bc_val = parameter_dictionary["bc_values"]
 
-        frac_faces = np.matlib.repmat(g.tags["fracture_faces"], g.dim, 1)
+        frac_faces = numpy.matlib.repmat(g.tags["fracture_faces"], g.dim, 1)
         if parameter_dictionary["bc"].bc_type == "scalar":
             frac_faces = frac_faces.ravel("F")
         elif parameter_dictionary["bc"].bc_type == "vectorial":
