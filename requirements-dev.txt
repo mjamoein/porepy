@@ -5,9 +5,9 @@ scipy >=1.0
 sympy >= 1.0
 matplotlib >= 1.0
 cython >= 0.23;platform_system=="Linux"
-pytest
+pytest <4.0
 pytest-cov == 2.6.0
-pytest-runner
+pytest-runner <4.0
 coverage
 coveralls
 six
