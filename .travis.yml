@@ -32,10 +32,10 @@ before_script:
   - pwd
   - tar xvf gmsh-3.0.6-Linux64.tgz
   - ls
-  - ls gmsh-3.0.6-Linux/bin/gmsh
+  - ls gmsh-3.0.6-Linux64/bin/gmsh
 
   # Create porepy config file
-  - echo "config = {\"gmsh_path\":\"$TRAVIS_BUILD_DIR/gmsh-3.0.6-Linux/bin/gmsh\"} " > porepy_config.py
+  - echo "config = {\"gmsh_path\":\"$TRAVIS_BUILD_DIR/gmsh-3.0.6-Linux64/bin/gmsh\"} " > porepy_config.py
   # add $HOME to $PYTHONPATH to make config file accessible
   - export PYTHONPATH=${TRAVIS_BUILD_DIR}:${PYTHONPATH}
 
