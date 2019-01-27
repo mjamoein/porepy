@@ -32,6 +32,7 @@ before_script:
   - pwd
   - tar xvf gmsh-2.11.0-Linux64.tgz
   - ls
+  - ls -gmsh-2.11.0-Linux64
 
   # Create porepy config file
   - echo "config = {\"gmsh_path\":\"$TRAVIS_BUILD_DIR/gmsh-2.11.0-Linux/bin/gmsh\"} " > porepy_config.py
