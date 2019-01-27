@@ -1,5 +1,5 @@
 sudo: true
-dist: xenial
+dist: trusty
 language: python
 
 cache: pip
@@ -36,9 +36,10 @@ before_script:
 
   # Create porepy config file
   - echo "config = {\"gmsh_path\":\"$TRAVIS_BUILD_DIR/gmsh-3.0.6-Linux64/bin/gmsh\"} " > porepy_config.py
+  - cat porepy_config.py
   # add $HOME to $PYTHONPATH to make config file accessible
   - export PYTHONPATH=${TRAVIS_BUILD_DIR}:${PYTHONPATH}
-
+  - echo $PYTHONPATH
   # Download fire for point-in-polyhedron test
   - wget https://raw.githubusercontent.com/keileg/polyhedron/master/polyhedron.py
   # Rename file
